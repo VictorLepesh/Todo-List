@@ -1,44 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'; // we can remove , { Component } and instead of doing extends Component we do extends React.Componenet
 import './App.css';
+import { toUnicode } from 'punycode';
 
-const Body = () => {
-  return (
-    <p>
-      Edit <code>src/App.js </code> and save to reload. test
-    </p>
-  );
-};
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Hiiiii</h1>
-      </header>
-    )
-  }
-}
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Body />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Clean</h1>
     </div>
   );
 }
 
 export default App;
+
