@@ -1,8 +1,6 @@
 import React, { Component } from 'react'; // we can remove , { Component } and instead of doing extends Component we do extends React.Componenet
-import Todos from "./components/Todos"
+import Todos from "./components/Todos";
 import './App.css';
-
-
 
 class App extends Component {
   state = {
@@ -29,11 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Suppp</h1>
-        <Todos info={this.state.todos[0]} />
-        <Todos info={this.state.todos[1]} />
-        <Todos info={this.state.todos[2]} />
-        <h1>Heyyy</h1>
+        <Todos info={this.state.todos} />
       </div>
     );
   }
