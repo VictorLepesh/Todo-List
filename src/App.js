@@ -1,7 +1,6 @@
 import React, { Component } from 'react'; // we can remove , { Component } and instead of doing extends Component we do extends React.Componenet
 import Todos from "./components/Todos"
 import './App.css';
-import { toUnicode } from 'punycode';
 
 
 
@@ -28,12 +27,12 @@ class App extends Component {
   
   // below <Todos todos={this.state.todos} /> is how we access our todos component
   render() {
-    console.log(this.state.todos);
     return (
       <div className="App">
         <h1>Suppp</h1>
-        <Todos todos={this.state.todos} />  
-        <Todos/>
+        <Todos info={this.state.todos[0]} />
+        <Todos info={this.state.todos[1]} />
+        <Todos info={this.state.todos[2]} />
         <h1>Heyyy</h1>
       </div>
     );
