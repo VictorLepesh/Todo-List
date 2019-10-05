@@ -4,15 +4,17 @@ import PropTypes from "prop-types";
 class Todos extends Component {
 
   render() {
-    return this.props.info.map((todo) => ( // When we map through something, we're creating a list, they need keys/indices
-      <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete}/>
+    return this.props.todo.map((todo) => ( // When we map through something, we're creating a list, they need keys/indices
+      <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} delTodo={this.props.delTodo}/>
     )); // Returns and array from an array
   }
 }
 
 // PropTypes
 Todos.propTypes = {
-  info: PropTypes.array.isRequired
+  todo: PropTypes.array.isRequired,
+  markComplete: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired
 }
 export default Todos;
 

@@ -14,8 +14,24 @@ a {
   text-decoration: none;
 }
 
-
 .App {
   text-align: center;
   background-color: #505050;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #666;
 }
