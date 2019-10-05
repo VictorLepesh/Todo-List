@@ -13,7 +13,7 @@ class App extends Component {
       {
         id: 2, // Usually you'll have a unique ID from the backend
         title: "Hippo Todo",
-        completed: false
+        completed: true
       },
       {
         id: 3, // Usually you'll have a unique ID from the backend
@@ -22,12 +22,23 @@ class App extends Component {
       }
     ]
   }
+
+  // toggle complete
+  // We have to use arrow functions, not vanilla unless we bind them with .bind(this)
+  markComplete = (id) => {
+    this.setState({ todos: this.state.todos.map(todo => {
+      if(todo-id === id) {
+        todo.completed = !todo.completed
+      }
+      return todo;
+    }) });
+  }
   
   // below <Todos todos={this.state.todos} /> is how we access our todos component
   render() {
     return (
       <div className="App">
-        <Todos info={this.state.todos} />
+        <Todos info={this.state.todos} markComplete={this.markComplete}/>
       </div>
     );
   }
